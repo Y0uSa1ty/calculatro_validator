@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Simple Reporter Suite">
+    <listeners>
+        <listener class-name = "ca.ctc.CustomReporter" />
+    </listeners>
+
+    <test name = "Simple Reporter test">
+        <classes>
+            <class name = "ca.ctc.MyTest" />
+        </classes>
+    </test>
+</suite>

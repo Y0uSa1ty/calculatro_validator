@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>JSON Diff - The semantic JSON compare tool</title> 
+
+        <link rel="stylesheet" href="reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="throbber.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="jdd.css" type="text/css" media="screen">
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="jsl/jsl.format.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jsl/jsl.parser.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jdd.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+window.onload = function() {
+  jdd.compare();
+}
+		</script>
+    </head> 
+    <body>
+        <div id="main">    
+            <div class="initContainer">
+                <div class="left">
+                    <textarea spellcheck="false" id="textarealeft">
+{{ json1 }}
+					</textarea>
+                    <pre id="errorLeft" class="error"></pre>                    
+                </div>
+                <div class="right">
+                    <textarea spellcheck="false" class="right" id="textarearight">
+{{ json2 }}
+					</textarea>
+                    <pre id="errorRight" class="error"></pre>                    
+                </div>
+            </div>    
+            <div class="diffcontainer">
+                <div id="report">
+                </div>
+                <pre id="out" class="left" class="codeBlock"></pre>
+                <pre id="out2" class="right" class="codeBlock"></pre>
+                <ul id="toolbar" class="toolbar"></ul>
+            </div>
+        </div>        
+    </body>
+</html>
